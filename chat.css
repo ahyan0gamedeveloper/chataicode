@@ -1,0 +1,88 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add font and colors */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Add a responsive grid layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+/* Add styles for the header */
+header {
+    grid-column: 1 / 13;
+    padding: 20px;
+    background-color: #00bcd4;
+}
+
+/* Add styles for the navigation menu */
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+nav ul li a:hover {
+    background-color: #0097a7;
+}
+
+/* Add styles for sections */
+section {
+    padding: 40px;
+}
+section#home {
+    grid-column: 1 / 13;
+    background-color: #f5f5f5;
+}
+section#about {
+    grid-column: 4 / 9;
+}
+section#services {
+    grid-column: 9 / 13;
+}
+section#contact {
+    grid-column: 1 / 13;
+}
+
+/* Add styles for the footer */
+footer {
+    grid-column: 1 / 13;
+    padding: 20px;
+    text-align: center;
+    background-color: #00bcd4;
+    color: #fff;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    section#home {
+        grid-column: 1 / 7;
+    }
+    section#about, section#services, section#contact {
+        grid-column: 1 / 7;
+    }
+}
